@@ -1,0 +1,118 @@
+.section-about {
+  background-color: $color-grey-light-1;
+  padding: 20rem 5rem;
+  margin-top: -20vh;
+
+  @include respond(tab-port) {
+    margin-top: -17vh;
+  }
+}
+
+.section-features {
+  padding: 15rem 5rem;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/bg-2.jpg);
+  background-size: cover;
+  transform: skewY(-3deg);
+  margin-top: -10rem;
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (min-width: 112.5em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/bg-2-big.jpg);
+  }
+
+  @include respond(tab-land-1) {
+    margin-top: -5rem;
+  }
+
+  @include respond(tab-port) {
+    margin-top: -12rem;
+  }
+
+  & > * {
+    transform: skewY(3deg);
+  }
+}
+
+.section-tours {
+  background-color: $color-grey-light-1;
+  padding: 15rem 5rem;
+  margin-top: -5rem;
+}
+
+.section-gallery {
+  background-color: $color-primary;
+  padding: 10rem 5rem;
+}
+
+.section-faq {
+  background-color: $color-grey-light-1;
+  padding: 10rem 5rem;
+}
+
+.section-book {
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  padding: 10rem 5rem;
+}
+
+.book {
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../img/bg-3.jpg);
+
+  background-size: cover;
+
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 65%,
+        transparent 65%
+      ),
+      url(../img/bg-3.jpg);
+
+    background-size: cover;
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 100%
+      ),
+      url(../img/bg-3-small.jpg);
+  }
+
+  &__form {
+    width: 50%;
+    padding: 6rem;
+
+    @include respond(tab-land) {
+      width: 65%;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+}

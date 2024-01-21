@@ -1,0 +1,82 @@
+@mixin abCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:      Tablet portrait           
+900 - 1200px:     Tablet landscape
+[1200 - 1800] is where our now styles apply
+1800px +:     Big Desktop
+*/
+
+/*
+ORDER -: Base + typography > general layout + grid > components
+*/
+
+// RESPONSIVE BREAKPOINTS
+// phone: 37.5em = 600px;
+// tab-port-1: 44em = 704px;
+// tab-port-2: 50em = 832px;
+// tab-port: 56.25em = 900px;
+// tab-land-1: 63.75em = 1020px;
+// tab-land: 75em = 1200px;
+// desktop: 112.5em = 1800px+;
+
+@mixin respond($breakpoint) {
+  // Phone: 0 - 600px
+
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  // tab-port: 600px - 900px
+
+  @if $breakpoint == tab-port-1 {
+    @media only screen and (max-width: 44em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port-2 {
+    @media only screen and (max-width: 52em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  // tab-land: 900px - 1200px
+
+  @if $breakpoint == tab-land-1 {
+    @media only screen and (max-width: 63.75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  // Desktop: 1800px+
+
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}

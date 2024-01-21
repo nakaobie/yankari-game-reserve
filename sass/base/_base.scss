@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8px; 8px/16px = 50%;  width < 900
+  }
+
+  @include respond(desktop) {
+    font-size: 100%; // 1rem = 12px; 12px/16px = 75%; width < 1800px+
+  }
+}
+
+body {
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+::selection {
+  color: $color-white;
+  background-color: $color-primary;
+}
