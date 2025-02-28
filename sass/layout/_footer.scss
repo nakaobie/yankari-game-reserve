@@ -110,5 +110,18 @@
     margin: 0 auto;
     text-align: center;
     width: 70%;
+
+    .x-link {
+      &:link,
+      &:visited {
+        text-decoration: underline;
+        color: inherit;
+      }
+
+      &:hover,
+      &:active {
+        color: $color-primary;
+      }
+    }
   }
 }
